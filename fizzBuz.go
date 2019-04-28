@@ -10,11 +10,16 @@ func main() {
 	fmt.Print("Input max value: ")
 	_,err := fmt.Scanf("%d", &userInput)
 
-	if err == nil { //If Scanf got value without errors
-		for x:=0; x<userInput; x++ {
-			fmt.Println(x, "\t", multiplicityCheck(x))
-		}
+	if err != nil {
+		fmt.Println(err)
+		return
 	}
+
+	for i:=0; i<userInput; i++ {
+		fmt.Println(i, "\t", multiplicityCheck(i))
+	}
+
+	return
 }
 
 func multiplicityCheck(x int) string {
