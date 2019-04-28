@@ -15,7 +15,7 @@ func main() {
 		return
 	}
 
-	for i:=0; i<userInput; i++ {
+	for i:=0; i<=userInput; i++ {
 		fmt.Println(i, "\t", multiplicityCheck(i))
 	}
 
